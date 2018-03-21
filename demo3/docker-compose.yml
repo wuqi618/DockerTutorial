@@ -1,0 +1,12 @@
+# docker-compose build
+# docker-compose up -d
+# docker-compose down
+
+version: '3.1'
+
+services:
+  app:
+    image: nodeapp
+    build: ./NodeApp
+    ports:
+      - "5000:5000"

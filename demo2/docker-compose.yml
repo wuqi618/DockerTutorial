@@ -1,0 +1,17 @@
+# docker-compose build
+# docker-compose up -d
+# docker-compose down
+
+version: '3.1'
+
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgresql-data-volume:/var/lib/postgresql/data
+volumes:
+  postgresql-data-volume:
